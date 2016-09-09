@@ -1,14 +1,12 @@
 'use strict';
 
 var _            = require('lodash');
-var gulp         = require('gulp');
 var environments = require('gulp-environments');
 var less         = require('gulp-less');
 var autoprefixer = require('gulp-autoprefixer');
 var concat       = require('gulp-concat');
 var cssmin       = require('gulp-minify-css');
 var sourcemaps   = require('gulp-sourcemaps');
-var jsmin        = require('gulp-jsmin');
 var lazypipe     = require('lazypipe');
 var gulpwebpack  = require('gulp-webpack');
 var webpack      = require('webpack');
@@ -16,9 +14,7 @@ var development  = environments.development;
 var production   = environments.production;
 
 const DEFAULT_COMMON = {
-    file: 'app',
-    before: function() {},
-    done: function() {}
+    file: 'app'
 };
 
 /**

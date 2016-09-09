@@ -79,7 +79,7 @@ function scriptsTask(opts) {
     
     if (development()) {
         opts.webpack.output.filename = opts.file;
-        opts.webpack.devtool = 'source-map';
+        opts.webpack.devtool = 'cheap-source-map';
     } else {
         opts.webpack.output.filename = min(opts.file);
         opts.webpack.plugins = [
